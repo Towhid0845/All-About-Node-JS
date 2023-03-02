@@ -1,0 +1,91 @@
+🔥 About 🔥
+-----------
+    Node.js is a JavaScript runtime environment built on Chrome's V8 JavaScript engine.
+    Node.js is a JavaScript that running on the server.
+    Each and Every file in Node JS is consider as module.
+
+
+🔥 Node JS REPL 👨‍🏫🙋‍♂️
+-----------------------
+    ✅ The REPL feature of Node is very useful in experimenting with Node.js codes and to debug JavaScript codes. We can consider it as a cmd for node.js
+
+    Read    ➡️ Read user's input, parses the input into JavaScript data-sturcture.
+    Eval    ➡️ Takes and evaluates the data structure.
+    Print   ➡️ Prints the result.
+    Loop    ➡️ Loops the above command until the user presses ctrl-c twice.
+
+
+    ✅ Command for REPL
+        node    ➡️ to start the REPL
+        .help   ➡️ to see the detail of command
+        .exit   ➡️ to exit the REPL
+        .editor ➡️ to write code in editor mode
+        fs      ➡️ to see file system of node.js
+        type nul > fileName.js ➡️ to create new file in node.js
+
+    ✅ What can we do with REPL:
+        1️⃣ can understand JS Expression
+        2️⃣ can Use variable
+        3️⃣ Multiline code statemets(loop, condition)
+        4️⃣ Use (_) to get the last result
+        5️⃣ can use editor mode
+    
+    press 'tab' twice to see all the library funciton of node.js
+
+
+🔥 Syncronus VS Asyncronus 🔥
+-----------------------------
+    ✅ In Syncronus programming if we run multiple program(commands) at a time then, 
+        The processor will follow FCFS algorithm to execute the program(commands).
+        ❤️ For Example
+            const fs = require("fs");
+            const data = fs.readFileSync("read.txt", "utf-8");
+            console.log(data);  // it will execute first
+            console.log("after the data");  // it will execute last
+
+    ✅ In Asyncronus programming if we run multiple program(commands) at a time then, 
+        The processor will follow SJF algorithm to execute the program(commands).
+        ❤️ For Example
+            const fs = require("fs");
+            const data = fs.readFile("read.txt", "utf-8",(err,data)=>{
+                console.log(data);  // it will execute last
+            });
+            console.log("after the data");  // it will execute first
+
+
+🔥 Node.js Core Modules 🔥👨‍🏫🙋‍♂️
+-------------------------------
+    Consider modules to be the same as JavaScript libraries. 
+    A set of functions you want to include in your application.
+    Node.js has a set of built-in modules which you can use without any further installation.
+
+    ✅ Modules:
+        1️⃣ fs(file System) module: It gives us access of file system of node.
+            We always need to write const fs = require("fs") to use file system module.
+            🗄️ see the detail in index.js file at 'Core Module (fs)' section
+
+        2️⃣ os(Operating System) module: It gives us access of Operating system properties or data.
+            We always need to write const os = require("os") to use Operating system module.
+            🗄️ see the detail in index.js file at 'Core Module (os)' section
+
+        3️⃣ path(File Path) module: It gives us access of file information in detail.
+            We always need to write const path = require("path") to use file path module.
+            🗄️ see the detail in index.js file at 'Core Module (path)' section
+
+
+🔥 Buffer 🔥
+------------
+    Node.js includes an additional data type called Buffer. It is not available in browser's JavaScript.
+    Buffer is mainly used to store binary data, while reading from a file or receiving packets over the network.
+    🗄️ see the detail in index.js file at 'Handling Buffer'
+
+
+🔥 Custome Module 🔥
+--------------------
+    In Node JS, we can create our own module. Whatever module we are creating we need to export it so that we can use it to another file(module).
+    🗄️ see detail in 'customeModule.js' file and 'Custome Module' section at index.js
+
+
+🔥 npm(node package manager) 🔥
+-------------------------------
+    ✅ npm is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js
